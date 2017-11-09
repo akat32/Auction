@@ -10,21 +10,18 @@ var UsersSchema = mongoose.Schema({
   token : {type : String},
   phone_number : {type : String, unique : true, required : true}
 });
-Users = mongoose.model("Users",UsersSchema,"Users");
-
 var ListSchema = mongoose.Schema({
   Seller : {type : String},
   Sell_token : {type : String},
   Sell_Phone : {type : String},
   Buyer : {type : String},
-  Buy_max {type : Number},
+  Buy_max : {type : Number},
   Buy_token : {type : String},
   Buy_number : {type : String}
 });
-List = mongoose.model("List", ListSchemat, "List");
-
-
-
+require('./err')(UsersSchema, ListSchema);
+Users = mongoose.model("Users",UsersSchema,"Users");
+List = mongoose.model("List", ListSchema, "List");
 exports.List = List;
 exports.Users = Users;
 exports.db = db;
