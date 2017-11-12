@@ -8,6 +8,8 @@ var UsersSchema = mongoose.Schema({
   email : {type : String, unique : true, required : true},
   name : {type : String, unique : true, required : true},
   token : {type : String},
+  address : {type : String},
+  isLogined: {type: Boolean, required:true, default: false},
   phone_number : {type : String, unique : true, required : true}
 });
 var ListSchema = mongoose.Schema({
@@ -15,9 +17,11 @@ var ListSchema = mongoose.Schema({
   Sell_token : {type : String},
   Sell_Phone : {type : String},
   Buyer : {type : String},
+  Buy_min : {type : Number},
   Buy_max : {type : Number},
   Buy_token : {type : String},
-  Buy_number : {type : String}
+  Buy_number : {type : String},
+  count : {type : Number}
 });
 require('./err')(UsersSchema, ListSchema);
 Users = mongoose.model("Users",UsersSchema,"Users");
