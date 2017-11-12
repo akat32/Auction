@@ -13,10 +13,12 @@ app.use(bodyParser.urlencoded({limit: '1gb', extended: false }));
 
 var auth = require('./routes/auth')(express.Router(), Users, rndString);
 var auction = require('./routes/auction')(express.Router(), List, Users, rndString);
-var image = require('./routes/image')(express.Router());
+var search = require('./routes/search')(express.Router(),Users);
+//var image = require('./routes/image')(express.Router());
 app.use('/auction', auction);
 app.use('/auth', auth);
-app.use('/image', image);
+app.use('/search', search)
+//app.use('/image', image);
 
 server.listen(3000, (req,res)=>{
   console.log('Server Port on 3000');
