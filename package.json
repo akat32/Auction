@@ -1,0 +1,32 @@
+{
+  "name": "dream_sells",
+  "version": "1.0.0",
+  "description": "2017 Dicon node.js backend",
+  "main": "app.js",
+  "dependencies": {
+    "Q": "^1.0.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.0",
+    "mongoose": "^4.13.2",
+    "multer": "^1.3.0",
+    "randomstring": "^1.1.5",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akat32/Dream_Sells.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akat32/Dream_Sells/issues"
+  },
+  "homepage": "https://github.com/akat32/Dream_Sells#readme"
+}
