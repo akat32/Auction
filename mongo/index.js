@@ -1,36 +1,19 @@
 var mongoose = require('mongoose');
-var db = mongoose.connect('mongodb://localhost/PaladinIsKing');
+var db = mongoose.connect('mongodb://localhost/paladiniskingab');
 mongoose.Promise = global.Promise;
 
 var UsersSchema = mongoose.Schema({
-  id : {type : String, unique : true, required : true},
+  id : {type : String, unique: true, required : true},
   passwd : {type : String, required : true},
   email : {type : String, unique : true, required : true},
   name : {type : String, unique : true, required : true},
-  token : {type : String},
-  address : {type : String},
-  isLogined: {type: Boolean, required:true, default: false},
-  phone_number : {type : String, unique : true, required : true}
+  phone_number : {type : String, unique : true, required : true},
+  address : {type : String, required : true},
+  token : {type : String}
 });
-var ListSchema = mongoose.Schema({
-  Seller : {type : String},
-  Sell_token : {type : String},
-  Sell_Phone : {type : String},
-  Buyer : {type : String},
-  Buy_min : {type : Number},
-  Buy_max : {type : Number},
-  Buy_token : {type : String},
-  Buy_number : {type : String},
-  count : {type : Number},
-  category : {type : String},
-  keyword : {type : String},
-  photo_link : {type : String},
-  item_introduce : {type : String},
-  
-});
-require('./err')(UsersSchema, ListSchema);
-Users = mongoose.model("Users",UsersSchema,"Users");
-List = mongoose.model("List", ListSchema, "List");
-exports.List = List;
+
+require('./err')(UsersSchema);
+Users = mongoose.model("users", UsersSchema);
+
 exports.Users = Users;
 exports.db = db;
