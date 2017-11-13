@@ -21,7 +21,12 @@ var ListSchema = mongoose.Schema({
   Buy_max : {type : Number},
   Buy_token : {type : String},
   Buy_number : {type : String},
-  count : {type : Number}
+  count : {type : Number},
+  category : {type : String},
+  keyword : {type : String},
+  photo_link : {type : String},
+  item_introduce : {type : String},
+  
 });
 require('./err')(UsersSchema, ListSchema);
 Users = mongoose.model("Users",UsersSchema,"Users");
