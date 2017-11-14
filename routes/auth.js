@@ -1,6 +1,6 @@
 module.exports = (router, Users,rndstring) => {
   router.post('/signup', async (req,res)=>{
-    let user = new Users(req.body);
+    var user = new Users(req.body);
     user.token = rndstring.generate(17);
     try{
       var result = await user.save();
@@ -12,7 +12,7 @@ module.exports = (router, Users,rndstring) => {
     else return res.status(412).send("Signup Fail");
   })
   .post('/signin', async (req,res)=>{
-    let user = await Users.findOne(req.body);
+    var user = await Users.findOne(req.body);
     if(!user) return res.status(404).send("User Not Found!");
     let return_user = {id : user.id, token : user.token};
     await res.status(200).json(return_user);
