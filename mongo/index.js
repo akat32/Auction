@@ -23,7 +23,8 @@ var ListSchema = mongoose.Schema({
   item_introduce : {type : String},
   buyer_name : {type : String},
   buyer_token : {type : String},
-  buyer_phone : {type : String}
+  buyer_phone : {type : String},
+  category : {type : String}
 });
 require('./err')(UsersSchema);
 Users = mongoose.model("users", UsersSchema);
