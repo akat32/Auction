@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var rndstring = require('randomstring');
-var cors = require('cors')();
+var CORS = require('cors')();
 require('./mongo');
 require('./func');
 var auth = require('./routes/auth')(express.Router(),Users,rndstring);
