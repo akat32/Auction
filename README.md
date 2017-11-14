@@ -38,3 +38,31 @@
     HTTP 200 : send UserID and token
 
     HTTP 404 : User Not Found
+
+* POST /find/name : Find Item (use item's name)
+    
+> Params
+    
+    item_name : item's name [String]
+    
+> Response
+    
+    HTTP 200 : send item's json
+    
+    HTTP 404 : item Not Found
+    
+* POST /find/category : Find Item (use item's category)
+        
+> Params
+        
+    category : item's category [String]
+        
+> Response
+        
+    HTTP 200 : send item's json
+        
+    HTTP 404 : item Not Found
+        
+          
+    
+    
