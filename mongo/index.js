@@ -20,6 +20,7 @@ var ListSchema = mongoose.Schema({
   start_price : {type : Number, required : true},
   now_price : {type : Number},
   count : {type : Number},
+  item_image : {type : String},
   item_introduce : {type : String},
   buyer_name : {type : String},
   buyer_token : {type : String},
