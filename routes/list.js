@@ -7,7 +7,7 @@ module.exports = (router, Users, List, rndstring)=>{
       var rnd = rndstring.generate(33);
       let new_list = new List({
         item_name : req.body.item_name,
-        item_token : user.token = rnd,
+        item_token : rnd,
       //  seller_name : req.session.name,
      //   seller_token : req.session.token,
         start_price : req.body.start_price,
