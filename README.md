@@ -91,6 +91,10 @@
 
     keyword : Item's keyword
 
+    seller_name : Seller's name
+
+    seller_phone : Seller's phone_number
+
 > Response
 
     HTTP 200 : item's json
@@ -104,6 +108,7 @@
     item_token : Item's item_token
 
     ex) localhost:3000/open/itemtoken
+
 > Response
 
     HTTP 200 : Item's json
