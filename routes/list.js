@@ -31,7 +31,8 @@ module.exports = (router, Users, List, rndstring)=>{
   router.post('/add', async (req,res)=>{
     console.log('1');
     upload(req,res,'upload/list', List).then(function (file){
-      let rand = rndstring.generate(33);
+      //let rand = rndstring.generate(33);
+      let rand = "asdasd";
       var new_list = new List({
         item_name : req.body.item_name,
         item_token : rand,
