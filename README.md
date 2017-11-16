@@ -91,10 +91,6 @@
 
     keyword : Item's keyword
 
-    seller_name : Seller's name
-
-    seller_phone : Seller's phone_number
-
 > Response
 
     HTTP 200 : item's json

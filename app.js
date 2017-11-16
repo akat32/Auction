@@ -31,11 +31,11 @@ app.use(passport.session());
 
 
 var auth = require('./routes/auth')(express.Router(),Users,rndstring,passport);
-var list = require('./routes/list')(express.Router(),Users,List,rndstring);
-var find = require('./routes/finditem')(express.Router(),List);
-var openitem = require('./routes/open')(express.Router(),List, Users);
+var list = require('./routes/list')(express.Router(),Users,List,rndstring,passport);
+var find = require('./routes/finditem')(express.Router(),List,passport);
+var openitem = require('./routes/open')(express.Router(),List, Users,passport);
 var image = require('./routes/image');
-var buy = require('./routes/buy')(express.Router(),Users);
+var buy = require('./routes/buy')(express.Router(),Users, passport);
 
 
 app.use('/auth', auth);
