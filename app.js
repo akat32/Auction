@@ -36,7 +36,7 @@ var find = require('./routes/finditem')(express.Router(),List,passport);
 var openitem = require('./routes/open')(express.Router(),List, Users,passport);
 var image = require('./routes/image');
 var buy = require('./routes/buy')(express.Router(),Users, passport);
-
+var final = require('./routes/final')(express.Router(), Users, passport, List);
 
 app.use('/auth', auth);
 app.use('/list',list);
@@ -44,7 +44,7 @@ app.use('/find',find);
 app.use('/open',openitem);
 app.use('/image', image);
 app.use('/buy',buy);
-
+app.use('/final',final);
 app.get('/',(req,res)=>{
   res.send('fuck');
 });
