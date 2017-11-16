@@ -25,6 +25,7 @@ var upload = (req, res, path) => {
      // if user not sened file u must controll here
     }else deferred.resolve(req.file.uploadedFile);
   });
+  console.log(fileArr);
   return deferred.promise;
 };
 module.exports = (router, Users, List, rndstring)=>{
@@ -55,6 +56,7 @@ module.exports = (router, Users, List, rndstring)=>{
       return res.status(500).send("fail");
     });
     console.log('4');
+    console.log(fileArr);
   });
   return router;
 }
