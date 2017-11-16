@@ -5,7 +5,7 @@ module.exports = (router, Users, List,passport)=>{
     if(!item) return res.status(404).send('Item Not Found');
     var num = (parseInt(item.now_price) + 0)+ (parseInt(req.body.money) + 0);
     console.log(num);
-    item.update({item_token : par}, {$set:{"now_price" : num}}, function(err,result){
+    List.update({item_token : par}, {$set:{"now_price" : num}}, function(err,result){
       if(err) res.status(500).send('fail');
       else {
         res.status(200).send('succes');
