@@ -1,5 +1,5 @@
 module.exports = (router, List, Users)=>{
-  router.get('/item/:token', async(req,res)=>{
+  router.get('/item', async(req,res)=>{
     var item = await List.findOne(req.query.token);
     if(!item) return res.status(404).send('Item Not found!');
     await res.status(200).json(item);
