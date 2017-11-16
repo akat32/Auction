@@ -19,6 +19,7 @@ var upload = (req, res, path) => {
    });
   var upload = multer({ storage: storage }).single('file');
   upload(req, res, (err) => {
+    console.log('3');
     if(err) deferred.reject();
     else if(req.file === undefined){
      // if user not sened file u must controll here
@@ -28,6 +29,7 @@ var upload = (req, res, path) => {
 };
 module.exports = (router, Users, List, rndstring)=>{
   router.post('/add', async (req,res)=>{
+    console.log('1');
     upload(req,res,'upload/list', List).then(function (file){
       let rand = rndstring.generate(33);
       var new_list = new List({
@@ -43,11 +45,13 @@ module.exports = (router, Users, List, rndstring)=>{
         item_introduce : req.body.item_introduce,
         item_image : "http://iwin247.info:3469/"+rand
       });
+      console.log('2');
       var result = new_list.save();
       if(result) return res.status(200).send("succes");
     },(err)=>{
       return res.status(500).send("fail");
     });
+    console.log('4');
   });
   return router;
 }
