@@ -9,10 +9,9 @@ var upload = (req, res, path) => {
      },
      // 서버에 저장할 파일 명
      filename: (req, file, cb) => {
-       var fileArr = file.originalname.split('.');
        file.uploadedFile = {
-         name: fileArr[0], //file name
-         ext: fileArr[1] //file type
+        name: file.originalname.split('.')[0], //file name
+        ext: file.originalname.split('.')[1] //file type
         };
         cb(null, file.uploadedFile.name + '.' + file.uploadedFile.ext);
      }
@@ -25,7 +24,6 @@ var upload = (req, res, path) => {
      // if user not sened file u must controll here
     }else deferred.resolve(req.file.uploadedFile);
   });
-  console.log(fileArr);
   return deferred.promise;
 };
 module.exports = (router, Users, List, rndstring)=>{
@@ -56,7 +54,6 @@ module.exports = (router, Users, List, rndstring)=>{
       return res.status(500).send("fail");
     });
     console.log('4');
-    console.log(fileArr);
   });
   return router;
 }
