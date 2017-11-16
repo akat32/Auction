@@ -10,7 +10,8 @@ var UsersSchema = mongoose.Schema({
   phone_number : {type : String, unique : true, required : true},
   address : {type : String, required : true},
   token : {type : String},
-  final_visit : {type : String}
+  final_visit : {type : String},
+  isLogined : {type : Boolean, default : false}
 });
 var ListSchema = mongoose.Schema({
   item_name : {type : String, required : true},
