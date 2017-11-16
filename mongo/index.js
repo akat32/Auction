@@ -9,7 +9,8 @@ var UsersSchema = mongoose.Schema({
   name : {type : String, unique : true, required : true},
   phone_number : {type : String, unique : true, required : true},
   address : {type : String, required : true},
-  token : {type : String}
+  token : {type : String},
+  final_visit : {type : String}
 });
 var ListSchema = mongoose.Schema({
   item_name : {type : String, required : true},

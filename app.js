@@ -11,9 +11,11 @@ require('./func');
 var auth = require('./routes/auth')(express.Router(),Users,rndstring);
 var list = require('./routes/list')(express.Router(),Users,List,rndstring);
 var find = require('./routes/finditem')(express.Router(),List);
+var openitem = require('./routes/open')(express.Router(),List, Users);
 app.use('/auth', auth);
 app.use('/list',list);
 app.use('/find',find);
+app.use('/open',openitem);
 app.listen(3469, (req,res)=>{
   console.log('Server Port on 3469');
 });
