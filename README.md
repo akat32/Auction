@@ -96,3 +96,15 @@
     HTTP 200 : item's json
 
     HTTP 412 : params error!
+
+* POST /open/item : Find with Item's item_token
+
+> params
+
+    item_token : Item's item_token
+
+> Response
+
+    HTTP 200 : Item's json
+
+    HTTP 404 : Item Not Found!
