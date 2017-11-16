@@ -40,29 +40,57 @@
     HTTP 404 : User Not Found
 
 * POST /find/name : Find Item (use item's name)
-    
+
 > Params
-    
+
     item_name : item's name [String]
-    
+
 > Response
-    
+
     HTTP 200 : send item's json
-    
+
     HTTP 404 : item Not Found
-    
+
 * POST /find/category : Find Item (use item's category)
-        
+
 > Params
-        
+
     category : item's category [String]
-        
+
 > Response
-        
+
     HTTP 200 : send item's json
-        
+
     HTTP 404 : item Not Found
-        
-          
-    
-    
+
+* POST /image : Item_image
+
+> Params
+
+    file : Item's Image
+
+> Response
+
+    HTTP 200 : send image's name, type
+
+    HTTP 500 : fail save
+
+* POST /list/add : Add Item
+
+> Params
+
+    item_name : Item's name
+
+    start_price : Item's First price
+
+    item_image :  Image's name. "When you received form '/image' "
+
+    item_introduce : Introduce Your Item
+
+    category : Item's category
+
+> Response
+
+    HTTP 200 : item's json
+
+    HTTP 412 : params error!
