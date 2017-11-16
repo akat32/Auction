@@ -7,6 +7,7 @@ module.exports = (router, Users, List, rndstring)=>{
     //new_list.seller_phone = req.session.phone_number;
     new_list.count = 0;
     new_list.now_price = req.body.start_price;
+    new_list.item_image = "http://iwin247.info:3469/"+req.body.item_image;
     var result = await new_list.save();
     if(result) return res.status(200).send("add list");
     else return res.status(412).send("fail add list");
