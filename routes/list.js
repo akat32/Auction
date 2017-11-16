@@ -47,8 +47,10 @@ module.exports = (router, Users, List, rndstring)=>{
       });
       console.log('2');
       var result = new_list.save();
+      console.log('2.1');
       if(result) return res.status(200).send("succes");
     },(err)=>{
+      console.log('2.5');
       return res.status(500).send("fail");
     });
     console.log('4');
