@@ -97,12 +97,13 @@
 
     HTTP 412 : params error!
 
-* POST /open/item : Find with Item's item_token
+* GET /open/:item : Find with Item's item_token
 
 > params
 
     item_token : Item's item_token
 
+    ex) localhost:3000/open/itemtoken
 > Response
 
     HTTP 200 : Item's json
