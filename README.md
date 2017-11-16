@@ -95,6 +95,42 @@
 
     HTTP 412 : params error!
 
+* POST /find/id : Find User ID
+
+> Params
+
+    phone_number : Users's phone_number
+
+> Response
+
+    HTTP 200 : Users's id
+
+    HTTP 404 : Users Not Found!
+
+* POST /find/passwd : Find User passwd
+
+> Params
+
+    id : Users's id
+
+> Response
+
+    HTTP 200 : Users's passwd
+
+    HTTP 404 : Users Not Found!
+
+* POST /final : Find User's final visit
+
+> Params
+
+    Nothing
+
+> Response
+
+    HTTP 200 : return_final  (User's final_visit)
+
+    HTTP 404 : Users Not Found!
+
 * GET /open/:item : Find with Item's item_token
 
 > params

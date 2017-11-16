@@ -37,7 +37,7 @@ var openitem = require('./routes/open')(express.Router(),List, Users,passport);
 var image = require('./routes/image');
 var buy = require('./routes/buy')(express.Router(),Users, passport);
 var final = require('./routes/final')(express.Router(), Users, passport, List);
-
+var find = require('./routes/find')(express.Router(), Users);
 app.use('/auth', auth);
 app.use('/list',list);
 app.use('/find',find);
