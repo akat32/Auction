@@ -35,9 +35,7 @@
 
 > Response
 
-    HTTP 200 : send UserID and token
-
-    HTTP 404 : User Not Found
+    res.redirect('/');
 
 * POST /find/name : Find Item (use item's name)
 
