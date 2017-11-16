@@ -1,36 +1,36 @@
 var multer = require('multer');
 var Q = require('q');
-var upload = (req, res, path) => {
+var rrand;
+var upload = function (req, res) {
   var deferred = Q.defer();
   var storage = multer.diskStorage({
-      // 서버에 저장할 폴더
-    destination: (req, file, cb) => {
-      cb(null, path);
-     },
-     // 서버에 저장할 파일 명
-     filename: (req, file, cb) => {
-       file.uploadedFile = {
-        name: file.originalname.split('.')[0], //file name
-        ext: file.originalname.split('.')[1] //file type
-        };
-        cb(null, file.uploadedFile.name + '.' + file.uploadedFile.ext);
-     }
-   });
+    // 서버에 저장할 폴더
+    destination: function (req, file, cb) {
+      cb(null, imagePath);
+    },
+
+    // 서버에 저장할 파일 명
+    filename: function (req, file, cb) {
+      file.uploadedFile = {
+        name: rrand,
+        ext: file.mimetype.split('/')[1]
+      };
+      cb(null, file.uploadedFile.name + '.' + file.uploadedFile.ext);
+    }
+  });
   var upload = multer({ storage: storage }).single('file');
-  upload(req, res, (err) => {
-    console.log('3');
-    if(err) deferred.reject();
-    else if(req.file === undefined){
-     // if user not sened file u must controll here
-    }else deferred.resolve(req.file.uploadedFile);
+  upload(req, res, function (err) {
+    if (err) deferred.reject();
+    else deferred.resolve(req.file.uploadedFile);
   });
   return deferred.promise;
 };
 module.exports = (router, Users, List, rndstring)=>{
   router.post('/add', async (req,res)=>{
     console.log('1');
+    var rand = rndstring.generate(10);
+    rrand = rand;
     upload(req,res,'upload/list', List).then(function (file){
-      let rand = rndstring.generate(33);
       console.log(rand);
       var new_list = new List({
         item_name : req.body.item_name,
