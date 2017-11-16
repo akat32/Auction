@@ -123,7 +123,7 @@
 
 > Params
 
-    Nothing
+    nothing :  have Not mean
 
 > Response
 

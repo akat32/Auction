@@ -1,5 +1,6 @@
 module.exports = (router, Users, passport, List)=>{
   router.post('/', async (req,res)=>{
+    var sss = req.body.nothing;
     var findd = req.session.passport.user.id
     console.log(findd);
     var final = await Users.findOne({id : findd});
