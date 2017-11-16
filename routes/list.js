@@ -1,23 +1,52 @@
 var multer = require('multer');
 var Q = require('q');
-
+var upload = (req, res, path) => {
+  var deferred = Q.defer();
+  var storage = multer.diskStorage({
+      // 서버에 저장할 폴더
+    destination: (req, file, cb) => {
+      cb(null, path);
+     },
+     // 서버에 저장할 파일 명
+     filename: (req, file, cb) => {
+       var fileArr = file.originalname.split('.');
+       file.uploadedFile = {
+         name: fileArr[0], //file name
+         ext: fileArr[1] //file type
+        };
+        cb(null, file.uploadedFile.name + '.' + file.uploadedFile.ext);
+     }
+   });
+  var upload = multer({ storage: storage }).single('file');
+  upload(req, res, (err) => {
+    if(err) deferred.reject();
+    else if(req.file === undefined){
+     // if user not sened file u must controll here
+    }else deferred.resolve(req.file.uploadedFile);
+  });
+  return deferred.promise;
+};
 module.exports = (router, Users, List, rndstring)=>{
   router.post('/add', async (req,res)=>{
-    upload(req,res,'upload/list', List).then((file)=>{
-      var rnd = rndstring.generate(33);
-      let new_list = new List({
+    upload(req,res,'upload/list', List).then(function (file){
+      let rand = rndstring.generate(33);
+      var new_list = new List({
         item_name : req.body.item_name,
-        item_token : rnd,
+        item_token : rand,
       //  seller_name : req.session.name,
-     //   seller_token : req.session.token,
+      //  seller_phone : req.session.phone_number,
+      //  seller_token : req.session.token,
         start_price : req.body.start_price,
-        item_introduce : req.body.item_introduce,
+        count :  0,
+        now_price : req.body.start_price,
         category : req.body.category,
-        item_photo: "http://iwin247.info:3469/list/img/"+rnd
+        item_introduce : req.body.item_introduce,
+        item_image : "http://iwin247.info:3469/"+rand
       });
       var result = new_list.save();
-      if(result) return res.status(200).json(new_list);
-      else return res.status(500).send("Fail save");
+      if(result) return res.status(200).send("succes");
+    },(err)=>{
+      return res.status(500).send("fail");
     });
   });
   return router;
