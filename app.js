@@ -11,6 +11,7 @@ var store = sessionstore.createSessionStore();
 var cookie = require('cookie');
 var cookieParser = require('cookie-parser');
 var cookieSession = require('cookie-session');
+var fs = require('fs');
 
 var CORS = require('cors')();
 app.use(CORS);
@@ -30,13 +31,18 @@ app.use(passport.session());
 
 
 
+var port = process.env.PORT || 4000;
+app.set('views', path.join(__dirname, 'views'));
+app.set('port', port)
+app.set('view engine', 'ejs');
+
 var auth = require('./routes/auth')(express.Router(),Users,rndstring,passport);
 var list = require('./routes/list')(express.Router(),Users,List,rndstring,passport);
 var find = require('./routes/finditem')(express.Router(),List,passport);
 var openitem = require('./routes/open')(express.Router(),List, Users,passport);
 var image = require('./routes/image');
-var buy = require('./routes/buy')(express.Router(),Users, passport);
-var final = require('./routes/final')(express.Router(), Users, passport, List);
+var buy = require('./routes/buy')(express.Router(),Users,List,passport);
+var final = require('./routes/final')(express.Router(), Users, List,passport);
 var find = require('./routes/find')(express.Router(), Users);
 app.use('/auth', auth);
 app.use('/list',list);
@@ -48,6 +54,8 @@ app.use('/final',final);
 app.get('/',(req,res)=>{
   res.send('fuck');
 });
+
+
 app.listen(3469,(req,res)=>{
   console.log('port on 3469');
 });
