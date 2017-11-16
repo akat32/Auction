@@ -89,6 +89,8 @@
 
     category : Item's category
 
+    keyword : Item's keyword
+
 > Response
 
     HTTP 200 : item's json
