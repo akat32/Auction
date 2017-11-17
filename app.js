@@ -36,7 +36,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('port', port)
 app.set('view engine', 'ejs');
 
-var auth = require('./routes/auth')(express.Router(),Users,rndstring,passport);
+var auth = require('./routes/auth')(express.Router(),Users,rndstring,passport,fs);
 var list = require('./routes/list')(express.Router(),Users,List,rndstring,passport);
 var find = require('./routes/finditem')(express.Router(),List,passport);
 var openitem = require('./routes/open')(express.Router(),List, Users,passport);

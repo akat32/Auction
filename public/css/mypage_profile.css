@@ -1,0 +1,241 @@
+@@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+body {
+    font-family: 'Nanum Barun Gothic', sans-serif;
+}
+.mypage{
+    width: 100%;
+    height: 1080px;
+    min-width: 1600px; 
+    background-color: #ffffff;
+    margin:0px;
+}
+
+.header{
+width:100%;
+height:20.4%;
+float:left;
+text-align: center;
+}
+
+.header .h-outer{
+position:relative;
+width:50%;
+height:100%;
+display:inline-block;
+
+}
+.header .h-outer .logo{
+position:relative;
+    z-index: 10000;
+width:236px;
+cursor: pointer;
+height:120px;
+margin-top:38px;
+}
+.header .sign {
+position: relative;
+margin-left:80%;
+top: 3%;
+}
+.header .h-outer .serch{
+position:relative;
+float:left;
+    z-index: 10000;
+bottom:39.6%;
+width:56%;
+height:25.6%;
+margin-left:300px;
+border:solid 6px #327fff;
+}
+.header .h-outer .serch .input{
+position: relative;
+height: 95%;
+width: 65%;
+    z-index: 10000;
+left:3%;
+top:1%;
+float: left;
+border: 0px;
+outline-style: none;  
+
+}
+.header .h-outer .serch .select{
+position: relative;
+top: 37.1%;
+font-size:110%;
+    z-index: 10000;
+font-weight: 300;
+padding-left: 3%;
+width: 21%;
+float: left;
+border: solid 0px #327fff;
+font-size: 110%;
+outline-style: none;  
+-webkit-appearance: none; 
+-moz-appearance: none;    
+background: url('../Resource/arrow_down.png') no-repeat 95% 50%; 
+}
+.header .h-outer .serch .button{
+position: relative;
+top: 25%;
+    z-index: 10000;
+right:3%;
+cursor: pointer;
+float : right;  
+}
+     .menu_profile{
+        position: relative;
+        left : 20.6%;
+        width:  208px;
+        height: 56px;
+        background-color: #327fff;
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 2.4;
+        letter-spacing: 2.3px;
+        text-align: center;
+        color: #ffffff;
+        border-radius: 10px;
+    }
+     .sell{
+        position: relative;
+        left : 20.6%;
+        width:  208px;
+        height: 56px;
+        background-color: #327fff;
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 2.4;
+        letter-spacing: 2.3px;
+        text-align: center;
+        color: #ffffff;
+        border-radius: 10px;
+    }
+    nav {
+        position: relative;
+        float: left;
+        height: 100%;
+        width: 31.4%;
+    }
+    nav .menu_bar{
+        float:left;
+        position: absolute;
+        left:65%;
+        width: 32.6%;
+        height: 33.6%;
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 2.4;
+        letter-spacing: 2.3px;
+        color: #327fff;
+
+    }
+     .menu_bar #menu_profile{           /* 같은건데 그냥 해놓음 */
+        position: relative;
+        width: 100%;
+        height: 15.2%;
+        border-radius: 10px;
+        background-color: #327fff;
+        border: solid 1px #ffffff;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    .menu_bar #sell_history{
+        position: relative;
+        width: 100%;
+        height: 15.2%;
+        border-radius: 10px;
+        background-color: #ffffff;
+        border: solid 1px #327fff;
+        text-align: center;
+        cursor: pointer;
+    }
+    .menu_bar #bit_history{
+        position: relative;
+        width: 100%;
+        height: 15.2%;
+        border-radius: 10px;
+        background-color: #ffffff;
+        border: solid 1px #327fff;
+        text-align: center;
+        cursor: pointer;
+    }
+    section{
+        position:relative;
+        width : 48.8%;
+        height:75.4%;
+        top: 20%;
+        margin-left:32.7%;
+        background-color:#327fff;
+    }
+    section .profile_content{
+        position: relative;
+        bottom:27%;
+        left:2%;
+        width: 100%;
+        height: 100%;
+    }
+    .profile_content .text{
+    position: relative;
+    font-size: 30px;
+    line-height: 2;
+    font-weight: bold;
+    text-align: center;
+    margin-left : 0%;
+    top:6px;
+    color: #ffffff;
+}
+hr{
+    width: 40%;
+    margin-left:0%;
+    color:white;
+}
+    section .profile_content .profile_text{
+        position: relative;
+        font-size: 20px;
+        line-height: 2;
+        letter-spacing: 2.7px;
+        color: #ffffff;
+        margin-left: 2.3%;
+        
+    }
+ 
+    section .profile_content .profile_input{
+        position: relative;
+        width: 42.3%;
+        height: 4.8%;
+        left:3%;
+        font-size:20px;
+        color:white;
+        background-color: #327fff;
+        display: flex;
+        border: solid 4px #ffffff;
+    }
+section .profile_content .profile_id{
+    position: relative;
+    width: 42.3%;
+    height: 4.8%;
+    left:3%;
+    background-color: #327fff;
+    display: flex;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+section .profile_content .save{
+    width:118px;
+    height: 47px;
+    margin-left:74%;
+    line-height: 45px;
+    border-radius: 10px;
+    color:#327fff;
+    font-size:20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color:white;
+    text-align: center;
+}
+a:link { color: black; text-decoration: none;}
+    a:visited { color: black; text-decoration: none;}
+    a:hover { color: gray; text-decoration: underline;}

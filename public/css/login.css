@@ -1,0 +1,119 @@
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+.back {
+        font-family: 'Nanum Barun Gothic', sans-serif;
+        position: relative;
+        background-color:  #327fff;
+        width: 100%;
+        height: 1020px;
+    }
+    .back .content{
+        position: relative;
+        width: 761px;
+        height: 100%;
+        background-color: #ffffff;
+        margin: auto;
+
+    }
+    .content .logo {
+        position: absolute;
+        width: 326px;
+        height: 169px%;
+        top:14.1%;
+        left: 27.9%;
+        right: 29.3%;
+        cursor: pointer;
+    }
+    input {
+        position: absolute;
+        background-color: #ffffff;
+        border: solid 4px #868e9d;
+        width: 83.4%;
+        height: 5.9%;
+        left:6.5%;
+        padding-left: 3%;
+        font-size:150%;
+    }
+    input:focus{
+        outline-color: none;
+        border:solid 4px #327fff;
+    }
+    #id {
+        position: absolute;
+        top: 38.5%;
+    }
+    #passwd {
+        position: absolute;
+        top: 50.4%;
+    }
+    button {
+        background-color: #327fff;
+        line-height: 2;
+        text-align: center;
+        color: #ffffff;
+        font-size: 125%;
+    }
+    #loginButton {
+        position: absolute;
+        width: 87.5%;
+        height: 88px;
+        left: 6.5%;
+        cursor: pointer;
+        top: 60.8%;
+    }
+    #searchID {
+        width: 26.9%;
+        height: 8.1%;
+        top: 71.2%;
+        cursor: pointer;
+        position: absolute;
+        left: 6.5%;
+    }
+    #searchPW {
+        width: 26.9%;
+        height: 8.1%;
+        cursor: pointer;
+        top: 71.2%;
+        position: absolute;
+        left: 36.8%;
+    }
+    #register {
+        width: 26.9%;
+        height: 8.1%;
+        cursor: pointer;
+        top: 71.2%;
+        position: absolute;
+        left: 67%;
+    }
+    ::-webkit-input-placeholder {
+        font-family: Dotum;
+        font-size: 20px;
+        line-height: 2.5;
+        letter-spacing: 2.2px;
+        color: #8e8e8e;
+        }
+
+    /* Firefox 4-18 */
+    :-moz-placeholder {
+        font-family: Dotum;
+        font-size: 24px;
+        line-height: 2.5;
+        letter-spacing: 2.2px;
+        color: #8e8e8e;
+        }
+
+    /* Firefox 19+ */
+    ::-moz-placeholder {
+        font-family: Dotum;
+        font-size: 24\px;
+        line-height: 2.5;
+        letter-spacing: 2.2px;
+        color: #8e8e8e;
+        }
+
+    /* IE10+ */
+    :-ms-input-placeholder {
+        font-family: Dotum;
+        font-size: 24px;
+        line-height: 2.5;
+        letter-spacing: 2.2px;
+        color: #8e8e8e; }

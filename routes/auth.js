@@ -1,5 +1,8 @@
-module.exports = (router, Users,rndstring, passport) => {
-  router.post('/signup', async (req,res)=>{
+module.exports = (router, Users,rndstring, passport,fs) => {
+  router.get('/signin', (req,res)=>{
+    res.render('login', {});
+  })
+  .post('/signup', async (req,res)=>{
     var user = new Users(req.body);
     user.token = rndstring.generate(17);
     var result = await user.save();
@@ -8,7 +11,6 @@ module.exports = (router, Users,rndstring, passport) => {
     else return res.status(412).send("Signup Fail");
   })
   .post('/signin', passport.authenticate('local'),(req,res)=>{
-    console.log(req.session.passport.user);
     res.redirect('/');
     // var user = await Users.findOne(req.body);
     // if(!user) return res.status(404).send("User Not Found!");

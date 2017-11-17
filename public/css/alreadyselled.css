@@ -1,0 +1,344 @@
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+    body{
+        font-family: 'Nanum Barun Gothic', sans-serif;
+        margin:0;
+    }
+    .info{
+        width: 100%;
+        height: 1080px;
+        min-width: 1920px;
+        background-color: #ffffff;
+        margin:0px;
+    }
+
+.header{
+    width:100%;
+    height:20.4%;
+    float:left;
+    text-align: center;
+}
+
+.header .h-outer{
+    position:relative;
+    width:50%;
+    height:100%;
+    display:inline-block;
+    
+}
+.header .h-outer .logo{
+    position:relative;
+    width:236px;
+    height:120px;
+    margin-top:38px;
+}
+.header .sign {
+    position: relative;
+    
+    margin-left:80%;
+    top: 3%;
+}
+.header .h-outer .serch{
+    position:relative;
+    float:left;
+    bottom:39.6%;
+    width:65%;
+    height:25.6%;
+    margin-left:300px;
+    border:solid 6px #327fff;
+}
+.header .h-outer .serch .input{
+    position: relative;
+    height: 95%;
+    width: 65%;
+    left:3%;
+    top:1%;
+    float: left;
+    border: 0px;
+    outline-style: none;  
+
+}
+.header .h-outer .serch .select{
+    position: relative;
+    top: 37.1%;
+    font-size:110%;
+    font-weight: 300;
+    padding-left: 3%;
+    width: 21%;
+    float: left;
+    border: solid 0px #327fff;
+    font-size: 110%;
+    outline-style: none;  
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    background: url('../Resource/arrow_down.png') no-repeat 95% 50%; 
+}
+.header .h-outer .serch .button{
+    position: relative;
+    top: 25%;
+    right:3%;
+    float : right;  
+    outline: none;
+}
+    
+#iteminfo{
+    position:relative;
+    float:left;
+    width:66.7%;
+    height: 605px;
+    margin-left:16.7%;
+    background-color:#327fff;
+    
+}
+
+#iteminfo #itemimage{
+    float:left;
+    width: 533px;
+    height: 533px;
+    border: solid 4px #ffffff;
+    margin-left:2.8%;
+    margin-top:36px ;
+}
+#iteminfo #itemimage #selled{
+    position:absolute;
+    top:53px;
+    left:459px;
+    width:90px;
+    height: 38px;
+    text-align: center;
+    background-color:#868e9d;
+    color:white;
+    font-size:20px;
+    font-weight: bold;
+    border: solid 2px #ffffff;
+}
+#iteminfo #itemdata{
+    float:left;
+    margin-top:36px;
+    margin-left:1%;
+    width: 667px;
+    height: 533px;
+}
+#iteminfo #itemdata #itemname{
+    font-size:30px;
+    font-weight: bold;
+    line-height: 5px;
+    margin-bottom:0;
+    color:white;
+}
+#iteminfo #itemdata #itemtime{
+    float:right;
+    color:white;
+}
+#iteminfo #itemdata #seller{
+    font-size:20px;
+    margin-top:10px;
+    margin-left:1%;
+    margin-bottom:0;
+    color:white;
+}
+#iteminfo #itemdata #sellername{
+    font-size:22px;
+    margin-left:1%;
+    font-weight: bold;
+    color:white;
+}
+#iteminfo #itemdata #nowPrice{
+    margin-bottom: 0;
+    float:left;
+    color:white;
+}
+#iteminfo #itemdata #nowPrice #nowText{
+    margin-top:10px;
+    margin-left:2.5%;
+    margin-bottom: 0;
+    font-size:20px;
+}
+#iteminfo #itemdata #nowPrice #nowNumb{
+    font-size:35px;
+    margin-left:2.5%;
+    font-weight: bold;
+}
+
+#iteminfo #itemdata #startPrice{
+    margin-top:14px;
+    margin-left:50%;
+    color:white;
+}
+#iteminfo #itemdata #startPrice #startText{
+    margin-bottom: 0;
+    margin-top:10px;
+    font-size:20px;
+}
+#iteminfo #itemdata #startPrice #startNumb{
+    font-size:35px;
+    font-weight: bold;
+}
+#iteminfo #itemdata #bidding{
+    float:left;
+    width:30%;
+    color:white;
+}
+#iteminfo #itemdata #bidding #bidText{
+    margin-bottom: 0;
+    margin-top:10px;
+    margin-left:2%;
+    font-size:20px;
+}
+#iteminfo #itemdata #bidding #bidNumb{
+    font-size:22px;
+    margin-left:2%;
+    font-weight: bold;
+}
+#iteminfo #itemdata #phonenumber{
+    margin-top:24px;
+    margin-left:50%;
+    color:white;
+}
+#iteminfo #itemdata #phonenumber #phoneText{
+    margin-bottom: 0;
+    margin-top:10px;
+    font-size: 20px;
+}
+#iteminfo #itemdata #phonenumber #phoneNumb{
+    font-size: 22px;
+    font-weight: bold;
+}
+#iteminfo #itemdata #lately{
+    font-size:20px;
+    margin-top:10px;
+    margin-bottom: 0;
+    margin-left:1%;
+
+    color:white;
+}
+
+#iteminfo #itemdata #datedata{
+    float:left;
+    display: inline-block;
+    margin-top:10px;
+    width:220px;
+    height: 180px;
+    line-height: 10px;
+    color:white;
+    text-align: center;
+    border-right:solid 1px #ffffff;
+}
+#iteminfo #itemdata #dateText{
+    font-size:20px;
+    font-weight: bold;
+}
+#iteminfo #itemdata #dateTime{
+    font-size:20px;
+}
+#iteminfo #itemdata #buyer{
+    float:left;
+    display: inline-block;
+    margin-top:10px;
+    width:220px;
+    height: 180px;
+    line-height: 10px;
+    color:white;
+    text-align: center;
+    border-right:solid 1px #ffffff;
+}
+#iteminfo #itemdata #buyer #idText{
+    font-size:20px;
+    font-weight: bold;
+}
+#iteminfo #itemdata #buyer #idData{
+    font-size:20px;
+}
+#iteminfo #itemdata #price{
+    float:left;
+    margin-top:10px;
+    width:200px;
+    height: 180px;
+    line-height: 10px;
+    color:white;
+    text-align: center;
+}
+#iteminfo #itemdata #price #priceText{
+    font-size:20px;
+    font-weight: bold;
+}
+#iteminfo #itemdata #price #priceData{
+    font-size:20px;
+}
+
+#itemselled{
+    float:left;
+    width:66.7%;
+    height: 144px;
+    margin-left:16.7%;
+    margin-top:13px;
+    background-color:#327fff;
+    color:white;
+}
+#itemselled .selledText{
+    margin-left:2.8%;
+    font-size:20px;
+    font-weight: bold;
+}
+
+#explain{
+    float:left;
+    margin-top:2%;
+    width:66.7%;
+    height: 605px;
+    margin-left:16.7%;
+}
+#exText{
+    font-size:23px;
+}
+#exImg{
+    width:30%;
+    height: 40%;
+}
+
+.popUp {
+                position: fixed;
+                width: 155px;
+                height: 51px;
+                border-radius: 10px ;
+                background-color: #005df7;
+                float :right;
+                margin:0;
+                padding: 0;
+                top:   315px;
+                right: 5%;
+                text-align: center;
+                font-size: 100%;
+                color: #ffffff;
+            }
+            .popUp2 {
+                position: fixed;
+                width: 155px;
+                height: 332px;
+                border-radius: 10px;
+                background-color: #005df7;
+                right: 5%;
+                top: 377px;
+                text-align: center;
+                font-size: 100%;
+                color: #ffffff;
+            }
+            .popUp3 {
+                position: fixed;
+                display: table-cell;
+                vertical-align: middle;
+                width: 155px;
+                height: 51px;
+                border-radius: 10px;
+                background-color: #005df7;
+                right: 5%;
+                top: 720px;
+                text-align: center;
+                font-size: 100%;
+                color: #ffffff;
+            }
+
+
+
+    a:link { color: black; text-decoration: none;}
+    a:visited { color: black; text-decoration: none;}
+    a:hover { color: gray; text-decoration: underline;}

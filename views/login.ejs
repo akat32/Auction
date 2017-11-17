@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dream Sell</title>
+    <link href='https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    //login
+    $(document).ready(function() {
+      $("#loginButton").click(function() {
+          var test=$.ajax({
+            type: "POST",
+            url: "http://localhost:3474/auth/signin",
+            id: $("#id").val(),
+            passwd: $("#passwd").val(),
+            success: function(data) {
+              return data;
+            },
+            error: function() {
+              alert("ERROR");
+            }
+          });
+          test.done(function(test){
+            $("#message").html("로그인 성공");
+          });
+      });
+    });
+
+    </script>
+</head>
+<body class ="back">
+    <div class = "content">
+        <img class="logo" src="../public/Resource/dreamsell_logo.png">
+        <input type="text" id="id" placeholder="아이디" name=id>
+        <input type="password" id="passwd" placeholder="비밀번호" name=passwd>
+        <button id="loginButton">로그인</button>
+        <button id="searchID">아이디 찾기</button>
+        <button id="searchPW">비밀번호 찾기</button>
+        <button id="register" onclick="goRegister()">회원 가입</button>
+        <div id="message"></div>
+    </div>
+</body>
+</html>

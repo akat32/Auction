@@ -1,0 +1,219 @@
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+            body {
+                font-family: 'Nanum Barun Gothic', sans-serif;
+                margin:0px;
+            }
+            .sell-page{
+                width: 100%;
+                height: 1080px;
+                min-width: 1500px; 
+                background-color: #ffffff;
+                margin:0px;
+            }
+.header{
+    width:100%;
+    height:20.4%;
+    float:left;
+    text-align: center;
+}
+
+.header .h-outer{
+    position:relative;
+    width:50%;
+    height:100%;
+    display:inline-block;
+    
+}
+.header .h-outer .logo{
+    position:relative;
+    width:236px;
+    height:120px;
+    margin-top:38px;
+}
+.header .sign {
+    position: relative;
+    margin-left:80%;
+    top: 5%;
+}
+.header .h-outer .serch{
+    position:relative;
+    float:left;
+    bottom:39.6%;
+    width:65%;
+    height:25.6%;
+    margin-left:300px;
+    border:solid 6px #327fff;
+}
+.header .h-outer .serch .input{
+    position: relative;
+    height: 95%;
+    width: 65%;
+    left:3%;
+    top:1%;
+    float: left;
+    border: 0px;
+    outline-style: none;  
+
+}
+.header .h-outer .serch .select{
+    position: relative;
+    top: 37.1%;
+    font-size:110%;
+    font-weight: 300;
+    padding-left: 3%;
+    width: 21%;
+    float: left;
+    border: solid 0px #327fff;
+    font-size: 110%;
+    outline-style: none;  
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    background: url('../Resource/arrow_down.png') no-repeat 95% 50%; 
+}
+.header .h-outer .serch .button{
+    position: relative;
+    top: 25%;
+    right:3%;
+    float : right;  
+    outline: none;
+}
+            
+            #upload{
+                position:relative;
+                float:left;
+                width:341px;
+                height:341px;
+                margin-left:20.6%;
+                margin-top:32px;
+                background-color:#e1e1e1;
+                border: solid 4px #868e9d;
+                text-align: center;
+                
+            }
+#upload #content{
+    display: inline-block;
+    margin-top:25%;
+    width: 48.5%;
+    height: 48.5%;
+}
+#upload #itemexport{
+    position:absolute;
+    width:13.8%;
+    height: 13.8%;
+    right:0;
+    bottom:0;
+    background-color: #868e9d;
+}
+            
+            #Pname{
+                float:left;
+                margin-left:2%;
+                margin-top:32px;
+                width:700px;
+                height:50px;
+                border:solid 4px #868e9d;
+            }
+            #Pcategory{
+                float:left;
+                margin-left:2%;
+                margin-top:38px;
+                width:700px;
+                height:50px;
+                border:solid 4px #868e9d;
+            }
+            #Pstartprice{
+                float:left;
+                margin-left:2%;
+                margin-top:39px;
+                width:700px;
+                height:50px;
+                border:solid 4px #868e9d;
+            }
+            #Pkeyword{
+                float:left;
+                margin-left:2%;
+                margin-top:39px;
+                width:523px;
+                height:50px;
+                border:solid 4px #868e9d;
+            }
+#importimage{
+    float: left;
+    margin-left:1%;
+    color:white;
+    text-align: center;
+    font-size:120%;
+    letter-spacing: 2.2px;
+    margin-top:39px;
+    width:160px;
+    height: 56px;
+    cursor: pointer;
+    background-color:#868e9d;
+}
+#submitImage{
+    float:left;
+    margin-left:5%;
+    margin-top:15px;
+    width : 25px;
+    height : 25px;
+}
+#addImage{
+    opacity: 0;
+    cursor: pointer;
+    position: relative;
+}
+#importtext{
+    float:left;
+    margin-left:3%;
+    margin-top:15px;
+}
+            
+            #explain{
+                float:left;
+                margin-left:20.6%;
+                margin-top:28px;
+                width:1090px;
+                height:50%;
+                margin-bottom:100px;
+                border:solid 4px #868e9d;
+                display:flex;
+            }
+                
+            .item{
+                font-size:150%;
+                height: 96%;
+                width: 90%;
+                margin-left:3%;
+                float: left;
+                border: 0px;
+                outline-style: none;  
+            }
+            .einput{
+                font-size:150%;
+                height: 90%;
+                width: 93%;
+                margin-top:2%;
+                margin-left:3%;
+                float: left;
+                border: 0px;
+                outline-style: none;  
+            }
+#confirm{
+    position: relative;
+    cursor:pointer;
+    background-color:#868e9d;
+    text-align: center;
+    font-size:150%;
+    color:white;
+    vertical-align: middle;
+    margin-top:44%;
+    width:9.8%;
+    height: 63px;
+}
+#submitButton{
+    opacity: 0;
+}
+            
+            a:link { color: black; text-decoration: none;}
+            a:visited { color: black; text-decoration: none;}
+            a:hover { color: gray; text-decoration: underline;}
