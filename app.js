@@ -43,21 +43,22 @@ var openitem = require('./routes/open')(express.Router(),List, Users,passport);
 var image = require('./routes/image');
 var buy = require('./routes/buy')(express.Router(),Users,List,passport);
 var final = require('./routes/final')(express.Router(), Users, List,passport);
-var find = require('./routes/find')(express.Router(), Users);
+var finds = require('./routes/find')(express.Router(), Users);
 app.use('/auth', auth);
 app.use('/list',list);
+app.use('/finds',finds);
 app.use('/find',find);
 app.use('/open',openitem);
 app.use('/image', image);
 app.use('/buy',buy);
 app.use('/final',final);
 app.get('/',(req,res)=>{
-  res.send('fuck');
+  res.send(req.session.passport.user.final_visit);
 });
 
 
-app.listen(3469,(req,res)=>{
-  console.log('port on 3469');
+app.listen(3474,(req,res)=>{
+  console.log('port on 3474');
 });
 
 module.exports = app;
