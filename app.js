@@ -56,6 +56,9 @@ app.get('/',(req,res)=>{
   res.send(req.session.passport.user.final_visit);
 });
 
+app.get('/info',(req,res)=>{
+  res.send(req.session.passport.user.final_visit);
+});
 
 app.listen(3474,(req,res)=>{
   console.log('port on 3474');
