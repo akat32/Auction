@@ -1,8 +1,5 @@
-module.exports = (router, Users,rndstring, passport,fs) => {
-  router.get('/signin', (req,res)=>{
-    res.render('login', {});
-  })
-  .post('/signup', async (req,res)=>{
+module.exports = (router, Users,rndstring, passport) => {
+  router.post('/signup', async (req,res)=>{
     var user = new Users(req.body);
     user.token = rndstring.generate(17);
     var result = await user.save();

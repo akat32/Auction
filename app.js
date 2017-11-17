@@ -12,6 +12,7 @@ var cookie = require('cookie');
 var cookieParser = require('cookie-parser');
 var cookieSession = require('cookie-session');
 var fs = require('fs');
+var ejs
 
 var CORS = require('cors')();
 app.use(CORS);
@@ -55,7 +56,9 @@ app.use('/final',final);
 app.get('/',(req,res)=>{
   res.send(req.session.passport.user.final_visit);
 });
-
+app.get('/signin',(req,res)=>{
+  res.render('login',{});
+});
 app.get('/info',(req,res)=>{
   res.send(req.session.passport.user.final_visit);
 });
